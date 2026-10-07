@@ -1,0 +1,19 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: test
+  description: "some random test"
+  annotations:
+    github.com/project-slug: camnoss/test
+    nerv.io/brm-fm: fm_test
+    # Every opcode of this FM as NAME=number, comma-separated. Keep it in sync
+    # with include/test_ops.h so others can avoid your numbers.
+    nerv.io/brm-opcodes: NERV_OP_TEST_TEST=10000
+  tags:
+    - brm
+    - c
+    - opcode
+spec:
+  type: library
+  lifecycle: experimental
+  owner: group:default/guests
